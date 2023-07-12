@@ -99,6 +99,11 @@ h3.texto_boton {
     left: 160px;
 }
 
+/* CARDS */
+.card-img-top:hover {
+    opacity: 0.8;
+}
+
 
 /* MEDIA QUERIES */
 /* CABECERA */
