@@ -49,17 +49,14 @@ section.cabecera {
   background-repeat: no-repeat;
   background-color: #2b73f7;
 }
-section.cabecera h1.titulo-principal {
+section.cabecera .titulo-principal, section.cabecera .subtitulo {
   color: white;
   position: relative;
   top: 125px;
   margin-left: 30px;
   font-size: 50px;
 }
-section.cabecera h2.subtitulo {
-  color: white;
-  position: relative;
-  font-size: 50px;
+section.cabecera .subtitulo {
   top: 132px;
   margin-left: 30px;
 }
@@ -74,6 +71,7 @@ section.cabecera p.texto_relleno {
 }
 section.cabecera div.boton_cabecera {
   margin-left: 30px;
+  max-width: 180px;
   position: relative;
   top: 110px;
 }
@@ -85,6 +83,7 @@ section.cabecera h3.texto_boton {
   color: white;
   position: relative;
   font-size: 30px;
+  max-width: 300px;
   top: 150px;
   left: 160px;
 }
@@ -114,32 +113,56 @@ section.contacto {
 section.contacto div.info {
   width: 50%;
 }
-section.contacto div.info i {
+section.contacto div.info .bxs-phone-call {
   font-size: 30px;
   color: #2b73f7;
   position: relative;
   left: 120px;
-  top: 148px;
+  top: 80px;
 }
-section.contacto div.info h3.texto_contacto {
+section.contacto div.info .texto_contacto, section.contacto div.info .texto_horario {
+  font-size: 22px;
   position: relative;
-  max-width: 180px;
+  max-width: 200px;
   left: 180px;
-  top: 50px;
+  top: 12px;
   color: #2b73f7;
 }
 section.contacto div.info p {
   position: relative;
   font-size: 20px;
   max-width: 280px;
+  margin: 0px 0px 10px 0px;
   left: 180px;
-  top: 70px;
+  top: 10px;
 }
 section.contacto div.info p.numbers {
   position: relative;
   max-width: 150px;
-  top: 60px;
+  bottom: 90px;
   right: 240px;
+}
+section.contacto div.info .texto_horario {
+  max-width: 230px;
+  bottom: 0px;
+  top: 20px;
+}
+section.contacto div.info p.horarios {
+  top: -10px;
+}
+section.contacto div.info .bx-time-five {
+  font-size: 30px;
+  color: #2b73f7;
+  position: relative;
+  left: 120px;
+  top: 30px;
+}
+section.contacto div.info img.oficinista {
+  position: relative;
+  bottom: 100px;
+  left: 40px;
+  height: 500px;
+  width: 500px;
 }
 section.contacto div.ubicacion {
   width: 50%;
@@ -148,6 +171,7 @@ section.contacto div.ubicacion p.texto_mapa {
   position: relative;
   right: 20px;
   top: 50px;
+  max-width: 600px;
   min-width: 320px;
 }
 section.contacto div.ubicacion p.texto_mapa span {
@@ -155,9 +179,20 @@ section.contacto div.ubicacion p.texto_mapa span {
   color: #2b73f7;
 }
 section.contacto div.ubicacion iframe.mapa {
+  height: 500px;
+  width: 540px;
   position: relative;
   right: 20px;
   top: 50px;
+}
+
+/* FOOTER */
+footer div.container-fluid div.row div.col-xs-12 a {
+  color: white;
+}
+footer div.container-fluid div.row div.col-xs-12 a:hover {
+  font-weight: bold;
+  color: #2b73f7;
 }
 
 /* MEDIA QUERIES */
@@ -174,9 +209,21 @@ section.contacto div.ubicacion iframe.mapa {
   }
 }
 @media screen and (max-width: 550px) {
-  h3.texto_boton {
-    top: 130px;
+  section.cabecera h1.titulo-principal, section.cabecera h1.subtitulo {
+    top: 70px;
+  }
+  section.cabecera h2.subtitulo {
+    top: 80px;
+  }
+  section.cabecera p.texto_relleno {
+    top: 80px;
+  }
+  section.cabecera h3.texto_boton {
+    top: 80px;
     left: 30px;
+  }
+  section.cabecera div.boton_cabecera {
+    top: 90px;
   }
 }
 /* CARDS */
@@ -195,38 +242,62 @@ section.contacto div.ubicacion iframe.mapa {
 @media screen and (max-width: 950px) {
   section.contacto {
     display: block;
-    justify-content: center;
   }
-  section.contacto div.info i {
-    left: 26px;
-    top: 98px;
+  section.contacto div.info {
+    width: 100%;
   }
-  section.contacto div.info h3.texto_contacto {
+  section.contacto div.info i.bxs-phone-call {
+    left: 30px;
+    top: 60px;
+  }
+  section.contacto div.info h3.texto_contacto, section.contacto div.info h3.texto_horario {
     left: 70px;
-    top: 20px;
+    top: 0px;
   }
   section.contacto div.info p {
     left: 70px;
-    top: 20px;
+    top: 0px;
   }
   section.contacto div.info p.numbers {
     left: 70px;
+    top: 0px;
+  }
+  section.contacto div.info p.horarios {
+    position: relative;
+    top: -30px;
+    right: 90px;
+  }
+  section.contacto div.info i.bx-time-five {
+    left: 30px;
     top: 20px;
   }
+  section.contacto div.info img.oficinista {
+    display: none;
+  }
+  section.contacto div.ubicacion {
+    width: 100%;
+  }
   section.contacto div.ubicacion p.texto_mapa {
-    left: 20px;
+    left: 40px;
+    top: -20px;
+    margin: 0px 40px 20px 10px;
   }
   section.contacto div.ubicacion iframe.mapa {
-    height: 400px;
-    width: 400px;
-    left: 20px;
+    position: relative;
+    height: 300px;
+    width: 340px;
+    left: 50px;
+    top: -20px;
   }
 }
 @media screen and (max-width: 450px) {
+  section.contacto div.info p {
+    font-size: 17px;
+  }
   section.contacto div.ubicacion iframe.mapa {
     height: 300px;
     width: 300px;
-    left: 20px;
+    left: 30px;
   }
 }
 
