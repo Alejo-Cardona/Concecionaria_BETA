@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Concecionara de autos usados y 0km - Junin, Buenos Aires">
+    <meta name="keywords" content="concecionaria, autos, automóvil, Junin, agencia, 0km, camionetas, automotores, Volkswagen, Toyota, Renault, Ford, Chevrolet, Nissan">
     <title>Cardona Automotores</title>
     <!-- BOOSTRAP STYLES --->
     <link rel="stylesheet" href="./CSS/bootstrap.css">
     <!-- BOXICONS --->
     <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+    <!--- ANIMATE STYLE--->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!--- AOS --->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom styles-->
     <link rel="stylesheet" href="./CSS/styles.css">
 </head>
@@ -24,28 +30,29 @@
                     <a href="./pages/Autos.html">Nuestras unidades</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./pages/Nosotros.html">Sobre Nosotros</a>
+                    <a href="#contacto">Contacto</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./pages/Contacto.html">Contacto</a>
+                    <a href="./pages/Nosotros.html">Sobre Nosotros</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <section class="cabecera">
-        <h2 class="subtitulo">Bienvenido a</h2>
-        <h1 class="titulo-principal">Cardona Automotores</h1>
-        <p class="texto_relleno">mas de 30 años dando la mejor atención y asesorando a cualquier persona que esté buscando un auto.</p>
-        <h3 class="texto_boton">¿Que estas buscando?</h3>
+    <main>
+        <section class="cabecera">
+            <h2 class="subtitulo animate__animated animate__fadeInLeft">Bienvenido a</h2>
+            <h1 class="titulo-principal animate__animated animate__fadeInLeft">Cardona Automotores</h1>
+            <p class="texto_relleno animate__animated animate__fadeInLeft">mas de 30 años dando la mejor atención y asesorando a cualquier persona que esté buscando un auto.</p>
+            <h3 class="texto_boton animate__animated animate__fadeInLeft">¿Que estas buscando?</h3>
 
-        <div class="boton_cabecera">
-            <button type="button" class="btn btn-light"><a href="./pages/Autos.html">Busca tu auto</a> </button>
-        </div>
-    </section>
-
+            <div class="boton_cabecera">
+                <button type="button" class="btn btn-light"><a href="./pages/Autos.html">Busca tu auto</a> </button>
+            </div>
+        </section>
+    </main>
     <!-- CARDS -->
     <section class="tarjetas">
-        <div class="card-group my-5">
+        <div class="card-group my-5" data-aos="zoom-out">
     <!-- 1 card ---->
         <div class="row mx-5">
             <div class="col-3">
@@ -95,7 +102,9 @@
         </div>
         </div>
     </section> 
-    <section class="contacto">
+
+    <!---- SECCION DE CONTACTO ---->
+    <section class="contacto" id="contacto">
         <div class="info">
             <i class= 'bx bxs-phone-call'></i>
             <h3 class="texto_contacto">CONTACTO</h3>
@@ -104,13 +113,14 @@
             <h3 class="texto_horario">HORARIO DE ATENCIÓN</h3>
             <i class='bx bx-time-five'></i>
             <p class="horarios">Lunes a Viernes de 8:30 - 12:00 y de 15:30 - 19:00</p>
-            <img src="./media/oficinista-Cardona-Automotores.png" alt="Oficinista Cardona Automotores" class="oficinista">   
+            <img src="./media/oficinista-Cardona-Automotores.png" alt="Oficinista Cardona Automotores" class="oficinista" data-aos="fade-right">   
         </div>
         <div class="ubicacion">
             <p class="texto_mapa"><span>Ubicación:</span> Av. Dr. Benito de Miguel 749, B6000 Junín, Provincia de Buenos Aires</p>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7811.191324878627!2d-60.960405838298435!3d-34.59906860981731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b895efa6a34bd7%3A0x636e807286140d3f!2sCardona%20Automotores!5e0!3m2!1ses!2sar!4v1690075172398!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mapa"></iframe>
         </div>
     </section>
+
     <!--- FOOTER --->
     <footer>
         <div class="container-fluid">
@@ -122,7 +132,7 @@
                     <a href="./pages/Autos.html" class="text-decoration-none">Nuestras Unidades</a>
                 </div>
                 <div class="col-xs-12 col-md-6 col-lg-3 pt-4">
-                    <a href="./pages/Contacto.html" class="text-decoration-none">Contacto</a>
+                    <a href="#contacto" class="text-decoration-none">Contacto</a>
                 </div>
                 <div class="col-xs-12 col-md-6 col-lg-3 pt-4">
                     <a href="./pages/Nosotros.html" class="text-decoration-none">Sobre Nosotros</a>
@@ -133,7 +143,10 @@
             </div>
         </div>
     </footer>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="./JS/pooper.js"></script>
     <script src="./JS/bootstrap.js"></script>
 </body>

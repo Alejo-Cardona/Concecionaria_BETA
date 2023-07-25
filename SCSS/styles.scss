@@ -1,6 +1,7 @@
 
 @import "partials/reset";
 @import "partials/variables";
+@import "partials/mixins";
 
 /* NAVBAR */
 nav.nav__bar {
@@ -35,8 +36,7 @@ nav.nav__bar {
 
 section.cabecera {
     position: relative;
-    width: 100%;
-    height: 600px;
+    @include tamano(600px,100%);
     background-image: url(../media/img-header.png);
     background-position: right;
     background-repeat: no-repeat;
@@ -88,12 +88,10 @@ section.cabecera {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 500px;
+    @include tamano(500px,100%);
     .card-group {
         position: absolute;
         top: 598px;
-    
         .card-img-top:hover {
             opacity: 0.8;
         }
@@ -102,8 +100,7 @@ section.cabecera {
 
 /* CONTACTO */
 section.contacto {
-    width: 100%;
-    height: 720px;
+    @include tamano(720px,100%);
     display: flex;
 
     div.info {
@@ -128,7 +125,7 @@ section.contacto {
             position: relative;
             font-size: $fuente-mediano;
             max-width: 280px;
-            margin: 0px 0px 10px 0px;
+            margin: 0px;
             left: 180px;
             top: 10px;
         }
@@ -137,12 +134,14 @@ section.contacto {
             max-width: 150px;
             bottom: 90px;
             right: 240px;
+            margin: 0px 0px 15px 0px;
         }
         .texto_horario {
             @extend .texto_contacto;
             max-width: 230px;
             bottom: 0px;
             top: 20px;
+            margin: 0px;
         }
         p.horarios {
             top: -10px;
@@ -156,7 +155,7 @@ section.contacto {
         }
         img.oficinista {
             position: relative;
-            bottom: 100px;
+            bottom: 60px;
             left: 40px;
             height: 500px;
             width: 500px;
@@ -177,8 +176,7 @@ section.contacto {
         }
 
         iframe.mapa {
-            height: 500px;
-            width: 540px;
+            @include tamano(500px,540px);
             position: relative;
             right: 20px;
             top: 50px;
@@ -299,8 +297,7 @@ footer {
             }
             iframe.mapa {
                 position: relative;
-                height: 300px;
-                width: 340px;
+                @include tamano(300px,340px);
                 left: 50px;
                 top: -20px;
             }
@@ -317,8 +314,7 @@ footer {
         }
         div.ubicacion {
             iframe.mapa {
-                height: 300px;
-                width: 300px;
+                @include tamano(300px,300px);
                 left: 30px;
             }
         }
