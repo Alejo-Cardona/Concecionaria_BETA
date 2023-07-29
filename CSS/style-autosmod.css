@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/* CSS RESET */
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  font-family: "Segoe UI";
+}
+
+/* Paleta de colores */
+/* Tamaño de fuente */
+/* Fuentes */
+/* NAVBAR */
+nav.nav__bar {
+  text-align: end;
+  background-color: rgb(219, 218, 218);
+  padding-top: 10px;
+  width: 100%;
+}
+nav.nav__bar ul {
+  display: inline-block;
+  margin-right: 30px;
+}
+nav.nav__bar li {
+  display: inline-block;
+  padding: 10px;
+  margin: 6px;
+  background-color: blue;
+  list-style: none;
+  border-radius: 10px;
+}
+nav.nav__bar li:hover {
+  background-color: #2b73f7;
+}
+nav.nav__bar a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+/* CABECERA */
+section.cabecera {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-image: url(../media/oficinas-agencia.png);
+  background-color: white;
+  background-position: left;
+  background-size: cover;
+  background-color: #2b73f7;
+}
+section.cabecera .titulo-principal {
+  color: #2b73f7;
+  font-size: 35px;
+  position: relative;
+  max-width: 560px;
+  left: 470px;
+  top: 70px;
+}
+
+/* CARDS */
+.tarjetas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.tarjetas .card:hover {
+  opacity: 0.8;
+}
+.tarjetas p {
+  color: black;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1055px) {
+  section.cabecera .titulo-principal {
+    max-width: 400px;
+    left: 450px;
+  }
+}
+@media screen and (max-width: 850px) {
+  section.cabecera .titulo-principal {
+    left: 360px;
+    top: 70px;
+  }
+}
+@media screen and (max-width: 780px) {
+  section.cabecera .titulo-principal {
+    left: 240px;
+    top: 30px;
+  }
+}
+@media screen and (max-width: 650px) {
+  section.cabecera {
+    background-image: url(../media/oficinas-agencia-mobile.png);
+  }
+  section.cabecera .titulo-principal {
+    font-size: 30px;
+    left: 40px;
+    top: 16px;
+    color: white;
+  }
+}
+
+/*# sourceMappingURL=style-autosmod.css.map */

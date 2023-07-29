@@ -1,0 +1,131 @@
+/* CSS RESET */
+@import "partials/reset";
+@import "partials/variables";
+@import "partials/mixins";
+
+
+/* NAVBAR */
+nav.nav__bar {
+    text-align: end;
+    background-color: rgb(219, 218, 218);
+    padding-top: 10px;
+    width: 100%;
+
+    ul {
+        display: inline-block;
+        margin-right: 30px;
+    }
+        li {
+            display: inline-block;
+            padding: 10px;
+        
+            margin: 6px;
+            background-color: blue;
+            list-style: none;
+            border-radius: 10px;
+        }
+        
+        li:hover {
+            background-color: $color-principal;
+            }
+            a {
+                text-decoration: none;
+                color: aliceblue;
+                }
+}
+
+/* BUSQUEDA TIPO DE AUTO */
+
+h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    min-width: 260px;
+    font-weight: bold;
+    color: $color-principal;
+    font-family: $tipo-de-fuente2;
+}
+
+section.busqueda-modelo {
+    @include tamano(400px,100%);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+
+    div.tipos-auto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        @include tamano(360px,100%);
+        background-color: white;
+        box-sizing: border-box;
+
+        section.sec1 {
+            @include tamano(360px,50%);
+            div.busqueda-item {
+                margin: 4px;
+                @include tamano (180px,100%);
+                    h4 {
+                        font-size: 16px;
+                        position: absolute;
+                        padding: 12px;
+                        margin-left: 20px;
+                        font-weight: bold;
+                        color: $color-secundario;
+                    }
+                    h4.monov {
+                        font-size: 14px;
+                        max-width: 158px;
+                    }
+                    .img-item {
+                        @include tamano (100%,100%);
+                        border-radius: 18px;
+                        box-shadow: 2px 2px 6px #000;
+                    }
+                    .img-item:hover{
+                        background-color: rgb(227, 227, 227);
+                    }
+            }
+        }
+    }
+}
+
+
+/* CARDS */
+.card-img-top:hover {
+    opacity: 0.8;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 450px) {
+    section.busqueda-modelo {
+        div.tipos-auto {
+            @include tamano(360px,80%);
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    section.busqueda-modelo {
+        div.tipos-auto {
+            @include tamano(360px,60%);
+        }
+    }
+}
+
+@media screen and (min-width: 860px) {
+    section.busqueda-modelo {
+        @include tamano(300px,100%);
+        div.tipos-auto {
+            @include tamano(300px,800px);
+            section.sec1 {
+                @include tamano(200px,50%);
+                display: flex;
+            }
+        }
+    }
+}

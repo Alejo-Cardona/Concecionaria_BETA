@@ -1,0 +1,112 @@
+/* CSS RESET */
+@import "partials/reset";
+@import "partials/variables";
+@import "partials/mixins";
+
+
+/* NAVBAR */
+nav.nav__bar {
+    text-align: end;
+    background-color: rgb(219, 218, 218);
+    padding-top: 10px;
+    width: 100%;
+
+    ul {
+        display: inline-block;
+        margin-right: 30px;
+    }
+        li {
+            display: inline-block;
+            padding: 10px;
+        
+            margin: 6px;
+            background-color: blue;
+            list-style: none;
+            border-radius: 10px;
+        }
+        
+        li:hover {
+            background-color: $color-principal;
+            }
+            a {
+                text-decoration: none;
+                color: aliceblue;
+                }
+}
+
+/* CABECERA */
+section.cabecera {
+    position: relative;
+    @include tamano(400px, 100%);
+    background-image: url(../media/oficinas-agencia.png);
+    background-color: white;
+    background-position: left;
+    background-size: cover;
+    background-color: $color-principal;
+
+    .titulo-principal {
+        color: $color-principal;
+        font-size: $fuente-mediano + 15;
+        position: relative;
+        max-width: 560px;
+        left: 470px;
+        top: 70px;
+    }
+}
+
+/* CARDS */
+.tarjetas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .card:hover {
+        opacity: 0.8;
+    }
+
+    p {
+        color: black;
+    }
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1055px) {
+    section.cabecera {
+        .titulo-principal {
+            max-width: 400px;
+            left: 450px;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    section.cabecera {
+        .titulo-principal {
+            left: 360px;
+            top: 70px;
+        }
+    }
+}
+
+@media screen and (max-width: 780px) {
+    section.cabecera {
+        .titulo-principal {
+            left: 240px;
+            top: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    section.cabecera {
+        background-image: url(../media/oficinas-agencia-mobile.png);
+        .titulo-principal {
+            font-size: $fuente-mediano + 10;
+            left: 40px;
+            top: 16px;
+            color: white;
+        }
+    }
+}
