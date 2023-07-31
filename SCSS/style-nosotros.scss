@@ -1,0 +1,123 @@
+
+@import "partials/reset";
+@import "partials/variables";
+@import "partials/mixins";
+
+/* NAVBAR */
+nav.nav__bar {
+    text-align: end;
+    background-color: rgb(219, 218, 218);
+    padding-top: 10px;
+    width: 100%;
+
+    ul {
+        display: inline-block;
+        margin-right: 30px;
+    }
+        li {
+            display: inline-block;
+            padding: 10px;
+        
+            margin: 6px;
+            background-color: blue;
+            list-style: none;
+            border-radius: 10px;
+        }
+        
+        li:hover {
+            background-color: $color-principal;
+            }
+            a {
+                text-decoration: none;
+                color: aliceblue;
+                }
+}
+
+/* CABECERA */
+section.cabecera {
+    @include tamano(300px,100%);
+    background-image: url(../media/Cardona-Automotores-Junin-2-opaca.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .titulo {
+        color: white;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        font-size: $fuente-grande - 10;
+        top: 100px;
+    }
+}
+
+/* MAIN */
+main {
+    margin: 40px;
+    h1 {
+        margin-bottom: 16px;
+    }
+    p {
+        font-size: $fuente-mediano;
+    }
+    .mision {
+        margin-top: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bxs-landscape {
+        position: relative;
+        font-size: 36px;
+        bottom: 32px;
+        margin-left: 50px;
+    }
+    
+    .vision {
+        @extend .mision;
+    }
+    .bxs-compass {
+        @extend .bxs-landscape;
+    }
+    p.texto-vision {
+        margin-bottom: 160px;
+    }
+}
+
+/* FOOTER */
+footer {
+    div.container-fluid {
+        div.row {
+            div.col-xs-12 {
+                a {
+                    color: white;
+                }
+                a:hover {
+                    font-weight: bold;
+                    color: $color-principal;
+                }
+            }
+        }
+    }
+}
+
+/* MEDIA QUERY */
+
+@media screen and (min-width: 600px) {
+    main {
+        h1 {
+            margin-left: 140px;
+        }
+        p {
+            margin-left: 140px;
+            margin-right: 140px;
+        }
+        .bxs-landscape {
+            margin-left: 36%;
+            bottom: 40px;
+        }
+        .texto-vision {
+            margin-left: 24%;
+        }
+    }
+}

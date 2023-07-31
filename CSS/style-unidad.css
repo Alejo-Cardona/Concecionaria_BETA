@@ -1,0 +1,124 @@
+@charset "UTF-8";
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  font-family: "Segoe UI";
+}
+
+/* Paleta de colores */
+/* Tamaño de fuente */
+/* Fuentes */
+/* NAVBAR */
+nav.nav__bar {
+  text-align: end;
+  background-color: rgb(219, 218, 218);
+  padding-top: 10px;
+  width: 100%;
+}
+nav.nav__bar ul {
+  display: inline-block;
+  margin-right: 30px;
+}
+nav.nav__bar li {
+  display: inline-block;
+  padding: 10px;
+  margin: 6px;
+  background-color: blue;
+  list-style: none;
+  border-radius: 10px;
+}
+nav.nav__bar li:hover {
+  background-color: #2b73f7;
+}
+nav.nav__bar a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+/* Courousel */
+div.carousel {
+  width: 80%;
+  height: 60%;
+  position: relative;
+  margin: 10%;
+}
+div.carousel div.carousel-item img {
+  border-radius: 18px;
+}
+
+section.contacto {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.contacto img.oficinista {
+  position: relative;
+  bottom: 90px;
+  width: 500px;
+  height: 500px;
+}
+section.contacto div.texto-info {
+  width: 50%;
+  height: 500px;
+}
+section.contacto div.texto-info h3 {
+  color: #2b73f7;
+  position: relative;
+  max-width: 500px;
+}
+section.contacto div.texto-info .boton-contacto {
+  position: relative;
+  top: 20px;
+}
+section.contacto div.texto-info .boton-contacto a {
+  text-decoration: none;
+  color: white;
+}
+
+/* FOOTER */
+footer div.container-fluid div.row div.col-xs-12 a {
+  color: white;
+}
+footer div.container-fluid div.row div.col-xs-12 a:hover {
+  font-weight: bold;
+  color: #2b73f7;
+}
+
+/* MEDIA QUERY */
+@media screen and (min-width: 1000px) {
+  table {
+    margin-top: 20%;
+  }
+}
+@media screen and (max-width: 900px) {
+  section.contacto {
+    width: 100%;
+    height: 400px;
+  }
+  section.contacto img.oficinista {
+    display: none;
+  }
+  section.contacto div.texto-info {
+    width: 100%;
+    height: 300px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  section.contacto div.texto-info h3 {
+    margin: 5%;
+  }
+  section.contacto div.texto-info div.boton-contacto {
+    margin-left: 5%;
+  }
+}
+
+/*# sourceMappingURL=style-unidad.css.map */

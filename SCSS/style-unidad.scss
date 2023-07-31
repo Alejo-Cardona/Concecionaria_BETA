@@ -1,0 +1,122 @@
+@import "partials/reset";
+@import "partials/variables";
+@import "partials/mixins";
+
+/* NAVBAR */
+nav.nav__bar {
+    text-align: end;
+    background-color: rgb(219, 218, 218);
+    padding-top: 10px;
+    width: 100%;
+
+    ul {
+        display: inline-block;
+        margin-right: 30px;
+    }
+        li {
+            display: inline-block;
+            padding: 10px;
+        
+            margin: 6px;
+            background-color: blue;
+            list-style: none;
+            border-radius: 10px;
+        }
+        
+        li:hover {
+            background-color: $color-principal;
+            }
+            a {
+                text-decoration: none;
+                color: aliceblue;
+                }
+}
+
+/* Courousel */
+div.carousel {
+    @include tamano(60%,80%);
+    position: relative;
+    margin: 10%;
+    div.carousel-item {
+        img {
+            border-radius: 18px;
+        }
+    }
+}
+
+section.contacto {
+    @include tamano(600px,100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img.oficinista {
+        position: relative;
+        bottom: 90px;
+        @include tamano(500px,500px);
+    }
+    div.texto-info {
+        @include tamano(500px,50%);
+        h3 {
+            color: $color-principal;
+            position: relative;
+            max-width: 500px;
+        }
+        .boton-contacto {
+            position: relative;
+            top: 20px;
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+
+
+
+/* FOOTER */
+footer {
+    div.container-fluid {
+        div.row {
+            div.col-xs-12 {
+                a {
+                    color: white;
+                }
+                a:hover {
+                    font-weight: bold;
+                    color: $color-principal;
+                }
+            }
+        }
+    }
+}
+
+/* MEDIA QUERY */
+
+@media screen and (min-width: 1000px) {
+    table {
+        margin-top: 20%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    section.contacto {
+        @include tamano(400px,100%);
+        img.oficinista {
+            display: none;
+        }
+        div.texto-info {
+            @include tamano(300px,100%);
+            display: block;
+            justify-content: center;
+            align-items: center;
+            h3 {
+                margin: 5%;
+            }
+            div.boton-contacto {
+                margin-left: 5%;
+            }
+        }
+    }
+}
