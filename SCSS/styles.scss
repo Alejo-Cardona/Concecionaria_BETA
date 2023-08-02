@@ -10,27 +10,37 @@ nav.nav__bar {
     padding-top: 10px;
     width: 100%;
 
+    label.checkbtn {
+        font-size: 40px;
+        line-height: 80px;
+        margin-right: 20px;
+        display: none;
+        width: 60px;
+        position: relative;
+        left: 78%;
+    }
+    #check {
+        display: none;
+    }
     ul {
         display: inline-block;
         margin-right: 30px;
     }
         li {
             display: inline-block;
-            padding: 10px;
-        
             margin: 6px;
-            background-color: blue;
             list-style: none;
+            padding: 10px;
+            background-color: blue;
             border-radius: 10px;
         }
-        
         li:hover {
             background-color: $color-principal;
             }
             a {
                 text-decoration: none;
                 color: aliceblue;
-                }
+            }
 }
 /* CABECERA */
 
@@ -276,6 +286,55 @@ footer {
 
 
 /* MEDIA QUERIES */
+/* NAV MOBILE*/
+@media screen and (max-width: 500px) {
+    nav.nav__bar {
+        label.checkbtn {
+            display: block;
+        }
+        #check:checked ~ ul {
+            left: 0;
+        }
+        #check:checked ~ div.navmobile {
+            height: 550px;
+            bottom: 10%;
+            background-color: #24303c;
+            transition: all .5s;
+        }
+
+        ul {
+            height: 450px;
+            width: 100%;
+            position: absolute;
+            bottom: 100px;
+            display: block;
+            left: -150%;
+            text-align: center;
+            transition: all .5s;
+            background-color: #24303c;
+            
+            li {
+                display: block;
+                position: sticky;
+                margin: 50px 60px;
+                line-height: 30px;
+                
+                a {
+                    font-size: 20px;
+                    padding-left: 25px;
+                    padding-right: 25px;
+                }
+                a.li-enlace {
+                    padding-left: 65px;
+                    padding-right: 65px;
+                }
+            }
+        }
+        
+    }
+}
+
+
 /* CABECERA */
 @media screen and (max-width: 1499px) {
     section.cabecera {

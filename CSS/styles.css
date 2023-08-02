@@ -21,16 +21,28 @@ nav.nav__bar {
   padding-top: 10px;
   width: 100%;
 }
+nav.nav__bar label.checkbtn {
+  font-size: 40px;
+  line-height: 80px;
+  margin-right: 20px;
+  display: none;
+  width: 60px;
+  position: relative;
+  left: 78%;
+}
+nav.nav__bar #check {
+  display: none;
+}
 nav.nav__bar ul {
   display: inline-block;
   margin-right: 30px;
 }
 nav.nav__bar li {
   display: inline-block;
-  padding: 10px;
   margin: 6px;
-  background-color: blue;
   list-style: none;
+  padding: 10px;
+  background-color: blue;
   border-radius: 10px;
 }
 nav.nav__bar li:hover {
@@ -266,6 +278,47 @@ footer div.container-fluid div.row div.col-xs-12 a:hover {
 }
 
 /* MEDIA QUERIES */
+/* NAV MOBILE*/
+@media screen and (max-width: 500px) {
+  nav.nav__bar label.checkbtn {
+    display: block;
+  }
+  nav.nav__bar #check:checked ~ ul {
+    left: 0;
+  }
+  nav.nav__bar #check:checked ~ div.navmobile {
+    height: 550px;
+    bottom: 10%;
+    background-color: #24303c;
+    transition: all 0.5s;
+  }
+  nav.nav__bar ul {
+    height: 450px;
+    width: 100%;
+    position: absolute;
+    bottom: 100px;
+    display: block;
+    left: -150%;
+    text-align: center;
+    transition: all 0.5s;
+    background-color: #24303c;
+  }
+  nav.nav__bar ul li {
+    display: block;
+    position: sticky;
+    margin: 50px 60px;
+    line-height: 30px;
+  }
+  nav.nav__bar ul li a {
+    font-size: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  nav.nav__bar ul li a.li-enlace {
+    padding-left: 65px;
+    padding-right: 65px;
+  }
+}
 /* CABECERA */
 @media screen and (max-width: 1499px) {
   section.cabecera {
